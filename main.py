@@ -4,6 +4,7 @@ import pygame
 import random
 
 
+
  
 # Defining color parameters
 BLACK    = (   0,   0,   0)
@@ -98,6 +99,7 @@ while not done:
     if len(block_list) == 0:
         # Add one to the level
         level += 1
+        
  
         # Add more blocks. Adds more depending on the level.
         for i in range(level * 10):
@@ -130,41 +132,6 @@ while not done:
     # Limit to 80 frames per second
     clock.tick(80)
  
- <html lang="pl">
-
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="author" content="Miłosz Sędziak" />
-    <title>temat</title>
-    <meta name="description" content="opis" />
-    <meta name="keywords" content="" />
-
-    <script type="text/javascript">
-        function timer() {
-            var today = new Date();
-            var day = today.getDate();
-            var month = today.getMonth() + 1;
-            var year = today.getFullYear();
-            var hour = today.getHours();
-            if (hour<10) hour= "0"+hour;
-            var minute = today.getMinutes();
-            if (minute<10) minute= "0"+minute;
-            var second = today.getSeconds();
-            if (second<10) second= "0"+second;
-            document.getElementById("clock").innerHTML = day + " / " + month + " / " + year +
-                " | " + hour + ":" + minute + ":" + second;
-            setTimeout("timer()", 1000);
-        };
-    </script>
-
-    <script type="text/javascript" src="timer.js"></script>
-</head>
-
-<body onload="timer();">
-    <div id="clock"></div>
-
-</body>
 
 
 #we got this code from the internet but when we got it from the internet, it did not have the functionality where it counted the amount of blocks taken out
