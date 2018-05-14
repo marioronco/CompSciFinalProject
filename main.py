@@ -2,7 +2,8 @@
  
 import pygame
 import random
-
+import os
+import time
 
 
  
@@ -15,11 +16,11 @@ RED      = ( 255,   0,   0)
 #"Sprite" class in Pygame
 class Block(pygame.sprite.Sprite):
      
-    # Constructor. Pass in the color of the block, 
-    # and its x and y position
+    #color of the block, and its x and y position
     def __init__(self, color, width, height):
-        # Call the parent class (Sprite) constructor
+        # Call the parent class (Sprite) 
         super().__init__() 
+
  
         # using block image and filling it.
         self.image = pygame.Surface([width, height])
@@ -27,7 +28,7 @@ class Block(pygame.sprite.Sprite):
  
         self.rect = self.image.get_rect()
  
-#Pygame
+#starting Pygame to run code
 pygame.init()
  
 # Set the height and width of the screen
@@ -35,7 +36,7 @@ SCREEN_WIDTH = 700
 SCREEN_HEIGHT = 400
 screen = pygame.display.set_mode([SCREEN_WIDTH, SCREEN_HEIGHT])
 
-#list of "sprites" within pygame that manages the blocks in groups
+#list of "sprites" within pygame that manages the blocks 
 block_list = pygame.sprite.Group()
  
 # This is a list of every sprite. All blocks and the player block as well.
@@ -56,15 +57,15 @@ for i in range(10):
 # Create a RED player block
 player = Block(RED, 20, 15)
 all_sprites_list.add(player)
- 
+
 #Loop until the user clicks the close button.
 done = False
  
 # Used to manage how fast the screen updates
 clock = pygame.time.Clock()
  
-# This is a font we use to draw text on the screen (size 36)
-font = pygame.font.Font(None, 36)
+# This is a font we use to draw text on the screen (size 40)
+font = pygame.font.Font(None, 40)
  
 # Current score
 score = 0
@@ -82,7 +83,6 @@ while not done:
     # as a list of two numbers.
     pos = pygame.mouse.get_pos()
    
-    
     # Set the player object to the mouse location
     player.rect.x = pos[0]
     player.rect.y = pos[1]
@@ -129,7 +129,7 @@ while not done:
     
     pygame.display.flip()
  
-    # Limit to 80 frames per second
+   # Limit to 80 frames per second
     clock.tick(80)
  
 
@@ -138,7 +138,14 @@ while not done:
 #also we are planning on adding a timer so it will restart if you dont take out the blocks fast enough \
 
 #next step is adding a timer and making there a way for someone to loose
-#If the player does not 
+#If the player does not clear all of the blocks 
 
  
 pygame.quit()
+
+ #Sample Python/Pygame Programs
+# Simpson College Computer Science
+# http://programarcadegames.com/
+# http://simpson.edu/computer-science/
+
+
