@@ -17,8 +17,8 @@ BLUE = (0, 0, 255)
 # classes 
  
 class Block(pygame.sprite.Sprite):
-    """ This class represents the block. """
-    def __init__(self, color):
+" This class represents the block. """
+def __init__(self, color):
         # Call the parent class (Sprite) constructor
         super().__init__()
  

@@ -1,4 +1,6 @@
 #creating a game using the "sprite" function in pygame
+
+#another form of the game similar to ours without the bullets. found later on to get score and level 
  
 import pygame
 import random
